@@ -35,11 +35,11 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
     """User Model for Database"""
     email = models.EmailField(max_length=256,unique=True)
     name = models.CharField(max_length=256)
-    phone = models.IntegerField()
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
     objects = UserProfileManager()
+    
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name']
