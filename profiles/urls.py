@@ -10,6 +10,8 @@ routers.register('Profile',views.UserProfileViewSet)
 
 urlpatterns = [
     path('api-view/',views.HellooApiView.as_view()),
+    path('login/',views.UserLoginApiView.as_view()),
+
     path('',include(routers.urls))
 
 
